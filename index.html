@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>My Creative Portfolio</title>
+</head>
+<body>
+<div class="fx" id="fx"></div>
+<button class="gear admin-only" id="gearBtn" aria-label="Settings">⚙</button>
+
+
+<div id="panel">
+  <label>Background color <input type="color" id="bgColor" value="#f9d9d9"></label>
+  <label>Accent color <input type="color" id="accentColor" value="#c45c6a"></label>
+  <label>Effect
+    <select id="effect"><option value="none">None</option><option value="hearts">Hearts</option><option value="petals">Petals</option><option value="sparkles">Sparkles</option><option value="bubbles">Bubbles</option></select>
+  </label>
+  <div class="row">
+    <button class="btn" id="bgImgBtn">Background image</button>
+    <button class="btn" id="bgClear">Clear</button>
+  </div>
+  <hr style="margin:10px 0; border:1px solid rgba(255,255,255,0.2)">
+  <div class="row">
+    <button class="btn" id="exportDb">Export JSON DB</button>
+    <button class="btn" id="importDbBtn">Import JSON DB</button>
+  </div>
+  <div class="row"><button class="btn" id="resetAll">Reset everything</button></div>
+  <input type="file" id="bgFile" accept="image/*" hidden>
+  <input type="file" id="importDb" accept=".json" hidden>
+</div>
+
+<main>
+  <div class="top">
+    <div class="card profile">
+      <button class="avatar" id="avatar" aria-label="Profile picture"></button>
+      <div>
+        <h1 id="name" spellcheck="false" style="font-weight:400">Name Here</h1>
+        <p id="title" spellcheck="false">Graphics Artist</p>
+      </div>
+    </div>
+    <div class="card welcome" id="welcome" spellcheck="false">Welcome to my creative portfolio! Explore my work in graphic design, layout, character illustration, branding, animation, and multimedia production, showcasing my creativity, skills, and passion for design.</div>
+    <div class="spotify">
+      <div id="player"></div>
+      <form id="spForm" class="admin-only"><input id="spInput" placeholder="Paste a Spotify link (song, playlist, album)"><button class="btn">Add</button></form>
+    </div>
+  </div>
+  <div class="bar"></div>
+  <div id="sections"></div>
+  <button class="login-btn" id="loginBtn">Admin Login</button>
+</main>
+
+<nav id="nav"></nav>
+<button class="whale" id="top" aria-label="Back to top">🐳</button>
+<input type="file" id="fileIn" hidden>
+<input type="file" id="avIn" accept="image/*" hidden>
+
+
+<script src="app.js"></script>
+</body>
+</html>
